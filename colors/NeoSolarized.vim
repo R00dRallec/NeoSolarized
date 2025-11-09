@@ -871,24 +871,27 @@ exe "hi! ALEWarningSign"        . s:fg_yellow   .s:bg_none   .s:fmt_none
 
 " NeoVim terminal buffer colours "{{{
 " ---------------------------------------------------------------------
-let g:terminal_color_0 = s:gui_base03
-let g:terminal_color_1 = s:gui_red
-let g:terminal_color_2 = s:gui_green
-let g:terminal_color_3 = s:gui_yellow
-let g:terminal_color_4 = s:gui_blue
-let g:terminal_color_5 = s:gui_magenta
-let g:terminal_color_6 = s:gui_cyan
-let g:terminal_color_7 = s:gui_base2
+" Adjusted terminal colors to Windows Terminal Campbell color scheme
+" allowing proper readable terminal outputs using a dark theme.
+" https://learn.microsoft.com/de-de/windows/terminal/customize-settings/color-schemes
+let g:terminal_color_0 = "#0C0C0C"
+let g:terminal_color_1 = "#C50F1F"
+let g:terminal_color_2 = "#13A10E"
+let g:terminal_color_3 = "#C19C00"
+let g:terminal_color_4 = "#0037DA"
+let g:terminal_color_5 = "#881798"
+let g:terminal_color_6 = "#3A96DD"
+let g:terminal_color_7 = "#C19C00"
 
 if g:neosolarized_termBoldAsBright == 1
-  let g:terminal_color_8 = s:gui_base02
-  let g:terminal_color_9 = s:gui_orange
-  let g:terminal_color_10 = s:gui_base01
-  let g:terminal_color_11 = s:gui_base00
-  let g:terminal_color_12 = s:gui_base0
-  let g:terminal_color_13 = s:gui_violet
-  let g:terminal_color_14 = s:gui_base1
-  let g:terminal_color_15 = s:gui_base3
+  let g:terminal_color_8 = "#767676"
+  let g:terminal_color_9 = "#E74856"
+  let g:terminal_color_10 = "#16C60C"
+  let g:terminal_color_11 = "#F9F1A5"
+  let g:terminal_color_12 = "#3B78FF"
+  let g:terminal_color_13 = "#B4009E"
+  let g:terminal_color_14 = "#61D6D6"
+  let g:terminal_color_15 = "#F2F2F2"
 else
   let g:terminal_color_8 = g:terminal_color_0
   let g:terminal_color_9 = g:terminal_color_1
